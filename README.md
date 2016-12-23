@@ -1,4 +1,4 @@
-Aplicação teste para requisições de movimentação de um robô via rest!
+Aplicação Java EE de teste para requisições de movimentação de um robô via rest!
 
 Como executar:
 
