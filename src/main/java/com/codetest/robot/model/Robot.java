@@ -2,6 +2,7 @@ package com.codetest.robot.model;
 
 import javax.enterprise.context.RequestScoped;
 
+import com.codetest.robot.i18n.RobotResources;
 import com.codetest.robot.rest.RobotResponse;
 
 /**
@@ -22,7 +23,8 @@ public class Robot {
 	public Robot() {
 		field = new boolean[5][5]; // inicialização 5x5
 		if (field.length % 2 == 0 || field[0].length % 2 == 0) { // Deve ser ímpar
-			throw new IllegalArgumentException("Campo deve ser inicializado com valores ímpares para se obter o centro!");
+			throw new IllegalArgumentException(
+					RobotResources.getMessage("campo.tamanho.invalido"));
 		}
 		findMiddle(); // necessário para se encontrar o meio 0x0
 		field[halfX][halfY] = true; // seta o valor inicial em 0x0
@@ -64,7 +66,8 @@ public class Robot {
 					break;
 				}
 			}else{
-				throw new IllegalArgumentException("Comando inválido!");
+				throw new IllegalArgumentException(
+						RobotResources.getMessage("comando.invalido"));
 			}
 		}
 		//Retorna a posição final do robô
@@ -98,7 +101,8 @@ public class Robot {
 			field[x + halfX][y + halfY] = true;
 			field[previousX + halfX][previousY + halfY] = false;
 		} catch (IndexOutOfBoundsException e) {
-			throw new IllegalArgumentException("Posição inválida");
+			throw new IllegalArgumentException(
+					RobotResources.getMessage("posicao.invalida"));
 		}
 	}
 }

@@ -22,7 +22,7 @@ import com.codetest.robot.model.Robot;
 @Path("/mars")
 public class MarsRobotEndpoint {
 
-	@Inject 
+	@Inject
 	private Robot robot; // robô injetado por requisição!
 	
 	

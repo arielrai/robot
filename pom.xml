@@ -30,5 +30,5 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<description>Aplicação teste para requisições de movimentação de um robô via rest</description>
+	<description>Aplicação teste para requisições de movimentação de um robô via rest!</description>
 </project>

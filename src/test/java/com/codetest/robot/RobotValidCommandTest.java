@@ -30,6 +30,12 @@ public class RobotValidCommandTest extends RobotTestCase {
 
 		RobotResponse northSouthRight = executeCommand("RR");
 		assertEquals("S", northSouthRight.getOrientacao());
+		
+		RobotResponse northSouthWestRight = executeCommand("RRR");
+		assertEquals("W", northSouthWestRight.getOrientacao());
+		
+		RobotResponse northSouthEastLeft = executeCommand("LLL");
+		assertEquals("E", northSouthEastLeft.getOrientacao());
 	}
 
 	/**
